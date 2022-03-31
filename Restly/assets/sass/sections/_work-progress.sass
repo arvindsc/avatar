@@ -1,0 +1,134 @@
+/*******************************************************/
+/****************** 13. Work Progress ******************/
+/*******************************************************/
+.work-progress-area
+    .section-title-with-btn
+        +ms-d
+            text-align: center
+            justify-content: center
+        h2
+            +ms-d
+                margin-right: 0
+.work-progress-inner
+    +ms-d
+        padding-left: 25px
+        padding-right: 25px
+.work-progress-item
+    margin: 50px auto 0
+    text-align: center
+    max-width: 190px
+    .icon
+        position: relative
+        margin-bottom: 20px
+        display: inline-block
+        +circle(#285ec1, 130px)
+        +ms-d
+            +circle(#285ec1, 100px)
+        i
+            color: white
+            @extend %icon
+            margin: 12px 0 0
+            +ms-d
+                font-size: 45px
+        .progress-step
+            top: 5px
+            right: 5px
+            font-weight: 500
+            position: absolute
+            +circle(white, 30px)
+            color: $primary-color
+            
+.progress-bg-line
+    position: relative
+    z-index: 1
+    &:after
+        position: absolute
+        +size(90%, 80px)
+        content: ''
+        top: 50%
+        left: 50%
+        z-index: -1
+        transform: translate(-50%)
+        background: url(../images/background/progress-bg-line.png) no-repeat center/cover
+        +tb-d
+            display: none
+            
+/* Work Progess Two */
+.work-progress-two
+    transform: translateY(95px)
+.work-progress-inner-two
+    background: white
+    border-radius: 5px
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.07)
+.progress-item-two
+    z-index: 1
+    position: relative
+    text-align: center
+    padding: 0 40px 60px
+    border-right: 1px solid #e6e8eb
+    +tb-d
+        border: none
+        margin-bottom: 50px
+    +mo-d
+        +gapboth(padding, 15px)
+    .icon
+        color: white
+        font-size: 60px
+        padding-top: 8px
+        margin: 0 auto -35px
+        transform: translateY(-50%)
+        +circle($primary-color, 125px)
+        +mo-d
+            +size(100px)
+            padding-top: 0
+            font-size: 45px
+    .learn-more
+        font-size: 14px
+        font-weight: 500
+        color: $heading-color
+        i
+            color: $primary-color
+    .progress-step
+        position: absolute
+        font-size: 125px
+        font-weight: 900
+        opacity: 0.06
+        left: 50%
+        z-index: -1
+        bottom: 5px
+        line-height: 1
+        color: $primary-color
+        font-family: $heading-font
+        transform: translate(-50%)
+        
+/* Work Progress Three */
+.work-progress-three
+    background-position: 0 100%
+    background-repeat: no-repeat
+.progress-item-two.style-two
+    border: none
+    margin-top: -65px
+    padding: 0 15px 30px
+    .progress-step
+        left: 0
+        top: 55px
+        z-index: 1
+        color: #f7f7f7
+        font-weight: 400
+        position: relative
+    .icon
+        background: white
+        margin-bottom: 25px
+        transform: translateY(0)
+        i
+            color: $primary-color
+    .learn-more,
+    .learn-more i
+        color: white
+    p
+        opacity: 0.8
+        
+/* Work Progress Four */
+.work-progress-area-four
+    .container
+        max-width: 1380px

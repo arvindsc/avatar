@@ -1,0 +1,213 @@
+/*******************************************************/
+/***************** 05. Custom Animation ****************/
+/*******************************************************/
+/** Header Section Animation **/
+.main-header .logo,
+.main-menu .navigation > li
+    animation-duration: 0.5s
+    animation-fill-mode: both
+    animation-name: fadeInRight
+
+.main-header .logo
+    animation-duration: 2s
+    animation-name: fadeInUp
+
+@for $i from 1 through 10
+    .main-menu .navigation > li:nth-child(#{$i})
+        animation-delay: #{0 + .2 * $i}s
+        
+.main-menu .navigation > li
+    +md-d
+        animation: none
+    
+/* Animation Delay */
+@for $i from 1 through 2
+     .delay-#{1 * $i}-0s
+        animation-delay: #{$i}s
+   
+@for $i from 1 through 9
+    .delay-0-#{1 * $i}s
+        animation-delay: #{0 + .1 * $i}s
+
+@for $i from 1 through 9
+    .delay-1-#{1 * $i}s
+        animation-delay: #{1 + .1 * $i}s
+    
+
+/* Menu Sticky */
+@-webkit-keyframes sticky
+    0%
+        top: -100px
+    100%
+        top: 0
+
+@keyframes sticky
+    0%
+        top: -100px
+    100%
+        top: 0
+        
+/* Hero Circle */
+@keyframes hero_circle
+    0%,
+    100%
+        transform: translate(-40%, 40%) rotate(0deg)
+    50%
+        transform: translate(-40%, 40%) rotate(-111deg)
+    
+    
+/* Preloader */
+@keyframes animate
+    0%,
+    100%
+        transform: rotateX(8.75deg) rotateY(35deg)
+    50%
+        transform: rotateX(35deg) rotateY(-35deg) rotate(180deg)
+
+@keyframes animate_1
+    0%,
+    100%
+        transform: translateZ(25px) rotateX(14deg)
+    33%
+        transform: translateZ(-25px) scale(0.4)
+    66%
+        transform: translateZ(-25px)
+
+/* About Image Animation */
+@keyframes borderRadius1
+  0%
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%
+
+  50%
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%
+
+  100%
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%
+
+@keyframes borderRadius2
+  0%
+    border-radius: 60% 30% 70% 40% / 60% 40% 30% 70%
+
+  50%
+    border-radius: 50% 60% 30% 60% / 30% 60% 70% 40%
+
+  100%
+    border-radius: 60% 30% 70% 40% / 60% 40% 30% 70%
+    
+
+@keyframes shapeAnimationOne
+  0%
+    transform: translate(0px, 0px) rotate(0deg)
+
+  25%
+    transform: translate(0px, 150px) rotate(90deg)
+
+  50%
+    transform: translate(150px, 150px) rotate(180deg)
+
+  75%
+    transform: translate(150px, 0px) rotate(270deg)
+
+  100%
+    transform: translate(0px, 0px) rotate(360deg)
+
+@keyframes shapeAnimationTwo
+  0%
+    transform: translate(0px, 0px) rotate(0deg)
+
+  25%
+    transform: translate(-150px, -0px) rotate(270deg)
+
+  50%
+    transform: translate(-150px, -150px) rotate(180deg)
+
+  75%
+    transform: translate(-0px, -150px) rotate(90deg)
+
+  100%
+    transform: translate(0px, 0px) rotate(360deg)
+
+@keyframes shapeAnimationThree
+  0%
+    transform: translate(0px, 0px) rotate(0deg)
+
+  25%
+    transform: translate(50px, 150px) rotate(90deg)
+
+  50%
+    transform: translate(150px, 150px) rotate(180deg)
+
+  75%
+    transform: translate(150px, 50px) rotate(270deg)
+
+  100%
+    transform: translate(0px, 0px) rotate(360deg)
+
+@keyframes shapeAnimationFour
+  0%
+    transform: translate(0px, 0px) rotate(0deg)
+
+  25%
+    transform: translate((-150px) -50px) rotate(90deg)
+
+  50%
+    transform: translate(-150px, -150px) rotate(180deg)
+
+  75%
+    transform: translate(-50px, -150px) rotate(270deg)
+
+  100%
+    transform: translate(0px, 0px) rotate(360deg)
+
+@keyframes shapeAnimationFive
+  0%
+    transform: translate(0px, 0px) rotate(0deg)
+
+  25%
+    transform: translate((-100px) -100px) rotate(90deg)
+
+  50%
+    transform: translate(100px, 50px) rotate(180deg)
+
+  75%
+    transform: translate(-100px, 150px) rotate(270deg)
+
+  100%
+    transform: translate(0px, 0px) rotate(360deg)
+
+@keyframes down-up-one
+  0%
+    transform: rotateX(0deg) translateY(0px)
+
+  50%
+    transform: rotateX(0deg) translateY(25px)
+
+  100%
+    transform: rotateX(0deg) translateY(0px)
+
+@keyframes down-up-two
+  0%
+    transform: rotateX(0deg) translate(0px)
+
+  50%
+    transform: rotateX(0deg) translate(25px, -25px)
+
+  100%
+    transform: rotateX(0deg) translate(0px)
+
+@keyframes moveLeftRight
+    0%
+        transform: translateX(0)
+    50%
+        transform: translateX(80px)
+    100%
+        transform: translateX(0)
+
+@keyframes zoomInOut
+    0%
+        transform: scale(0)
+    50%
+        transform: scale(1)
+    100%
+        transform: scale(0)
+    

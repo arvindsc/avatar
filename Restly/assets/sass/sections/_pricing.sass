@@ -1,0 +1,309 @@
+/*******************************************************/
+/***************** 14. Pricing Section *****************/
+/*******************************************************/
+.pricing-item
+    border-radius: 5px
+    text-align: center
+    margin-bottom: 30px
+    padding: 15px 15px 45px
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.07)
+    &:hover
+        .pricing-header
+            background-color: $primary-color
+            background-image: url(../images/background/pricing-bg.png)
+        .price,
+        .pricing-time,
+        .pricing-title
+            color: white
+    ul
+        margin: 45px 0
+        li
+            transition: 0.3s
+            margin-bottom: 18px
+
+.pricing-header
+    padding: 25px
+    transition: 0.5s
+    border-radius: 5px
+    background-color: $light-color
+    .pricing-title
+        transition: 0.5s
+        margin-bottom: 15px
+        text-transform: uppercase
+    .price
+        line-height: 1
+        font-size: 48px
+        @extend %heading
+        transition: 0.5s
+        color: $primary-color
+        &:before
+            content: '$'
+            font-size: 24px
+    .pricing-time
+        opacity: 0.5
+        color: black
+        margin: 10px 0 0
+        transition: 0.5s
+        
+/* Pricing Style Two */
+.pricing-item.style-two
+    overflow: hidden
+    transition: 0.5s
+    margin-bottom: 50px
+    border: 1px solid #ececec
+    +overlay($light-black-color, 0)
+    &:before
+        transition: 0.5s
+        border-radius: 5px
+    &:after
+        position: absolute
+        content: ''
+        left: 50%
+        top: -200px
+        z-index: -1
+        transition: 0.5
+        transform: translate(-50%)
+        +circle($light-color, 400px)
+    &:hover
+        color: white
+        margin-top: -25px
+        margin-bottom: 30px
+        padding-bottom: 55px
+        .pricing-header
+            padding-top: 35px
+            padding-bottom: 35px
+        &:before
+            opacity: 1
+        &:after
+            top: -180px
+            background: $primary-color
+        
+    .pricing-header
+        background: transparent
+
+/* Pricing Style Three */
+.pricing-section-three
+    +overlay($light-color, 1)
+    &:before
+        top: -40%
+        background-repeat: no-repeat
+        background-image: url(../images/background/price-bg-balls.png)
+    .container
+        &:after
+            content: ''
+            top: 5%
+            z-index: -1
+            right: -100px
+            position: absolute
+            +circle(transparent, 200px)
+            border: 1px solid $primary-color
+.pricing-item-three
+    overflow: hidden
+    background: white
+    text-align: center
+    position: relative
+    border-radius: 5px
+    margin-bottom: 30px
+    padding: 20px 0 50px
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.07)
+    &:hover
+        .pricing-type
+            top: 0
+            opacity: 1
+    .pricing-type
+        position: absolute
+        font-size: 14px
+        right: 25px
+        top: -110px
+        opacity: 0
+        color: white
+        font-weight: 500
+        transition: 0.5s
+        padding: 17px 1px 27px 0
+        text-transform: uppercase
+        background: $primary-color
+        -webkit-writing-mode: vertical-lr
+        &:after
+            bottom: -16px
+            left: 2px
+            content: ''
+            +box(white, 25px)
+            position: absolute
+            transform: rotate(45deg)
+    .icon i
+        @extend %icon
+        margin-top: 10px
+    ul
+        margin-bottom: 45px
+        li
+            transition: 0.3s
+            margin-bottom: 18px
+    .pricing-header
+        background: white
+        
+/* Price Style Five */
+.monthly-yearly
+    padding: 13px 20px
+    background: white
+    border-radius: 5px
+    display: inline-flex
+    .custom-control
+        padding-left: 25px
+    label
+        color: #949494
+        font-size: 18px
+        margin-bottom: 0
+        transition: 0.5s
+        font-weight: 500
+        text-transform: capitalize
+    .custom-control-label::before
+        background-color: #e7edf8
+        border: none
+    .custom-radio .custom-control-input:checked~.custom-control-label
+        color: $heading-color
+    .custom-radio .custom-control-input:checked~.custom-control-label::after
+        background-color: $primary-color
+        background-image: none
+        border-radius: 50%
+        
+/* Price Style Six */
+.pricing-item-six
+    padding: 50px 25px
+    margin-bottom: 30px
+    background: #F4F8FB
+    .pricing-title
+        font-weight: 400
+        margin-bottom: 25px
+        color: $primary-color-two
+    .price
+        display: block
+        font-size: 36px
+        font-weight: 500
+        margin-bottom: 50px
+        color: $heading-color
+        &:before
+            content: '$'
+    .save-up
+        color: #9E59FF
+        background: white
+        padding: 3px 20px
+        margin-bottom: 50px
+        display: inline-block
+    p
+        color: #6C727D
+        font-size: 18px
+        margin-bottom: 50px
+    &.popular-plan
+        margin-top: -50px
+        padding-top: 100px
+        padding-bottom: 100px
+        +gapboth(margin, -30px)
+        background: $primary-color
+        +ms-d
+            +gapboth(margin, 0)
+        .price,
+        .pricing-title
+            color: white
+        p
+            color: #CED0D4
+            
+/* Price Style Seven */
+.pricing-seven
+    background-repeat: no-repeat
+    background-position: center bottom
+    .circle-drop
+        top: 30%
+        left: 15%
+        position: absolute
+        +circle(#FFC80B, 10px)
+        animation: zoomInOut 2s linear infinite
+.pricing-tab
+    position: relative
+    display: inline-flex
+    &:before
+        content: ''
+        width: 50px
+        height: 24px
+        position: absolute
+        background: #2969E6
+        border-radius: 20px
+        left: 58px
+        top: 0
+    &:after
+        content: ''
+        +size(14px)
+        border-radius: 50%
+        position: absolute
+        background: white
+        left: 88px
+        top: 5px
+        z-index: 2
+        transition: 0.5s
+    &.for-yearly
+        &:after
+            left: 63px
+    a
+        line-height: 1
+        padding: 5px 0
+        font-size: 14px
+        font-family: 'Circular Std'
+        &.active
+            color: #2969E6
+        &:first-child
+            margin-right: 45px
+        &:last-child
+            margin-left: 45px
+.pricing-item-seven
+    padding: 50px
+    background: #FFFFFF
+    border-radius: 10px
+    margin-bottom: 30px
+    box-shadow: 0px 10px 70px rgba(0, 0, 0, 0.05)
+    +sm-d
+        +gapboth(padding, 25px)
+    +xs-d
+        +gapboth(padding, 15px)
+    .pricing-top
+        display: flex
+        margin-bottom: 25px
+        padding-bottom: 25px
+        font-family: 'Circular Std'
+        justify-content: space-between
+        border-bottom: 1px solid #E5E7EF
+        .price
+            color: #000F5C
+            line-height: 1
+            font-size: 48px
+            &:before
+                content: '$'
+    .price-top-left
+        h4
+            line-height: 1
+            font-size: 24px
+            font-weight: 500
+            margin-bottom: 10px
+            text-transform: capitalize
+        span
+            color: #000F5C
+            font-size: 14px
+    .list-style-three
+        margin-bottom: 45px
+        li
+            font-size: 16px
+            font-weight: 600
+            margin-bottom: 15px
+            &:before
+                color: #000F5C
+                font-size: 12px
+                margin-right: 10px
+                border: 1px solid #E5E7EF
+                +circle(transparent, 25px)
+    .theme-btn.style-six
+        width: 100%
+        color: #000F5C
+        font-weight: 600
+        justify-content: center
+        &:hover
+            color: white
+            background: $orange-color
+            border-color: $orange-color

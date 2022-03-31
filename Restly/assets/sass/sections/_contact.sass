@@ -1,0 +1,149 @@
+/*******************************************************/
+/**************** 23. Contact Section ******************/
+/*******************************************************/
+.contact-section-inner
+    transform: translateY(-100px)
+    position: relative
+    z-index: 1
+    +sm-d
+        +gapboth(padding, 25px)
+    > .row
+        +colgap(45px)
+    
+.contact-image-number
+    position: relative
+    height: 100%
+    overflow: hidden
+    min-height: 400px
+    border-radius: 5px
+    .contact-number
+        position: absolute
+        left: 0
+        bottom: 0
+        display: flex
+        +size(100%, 50%)
+        align-items: end
+        text-align: center
+        padding-bottom: 30px
+        justify-content: center
+        background-image: linear-gradient(to top, $primary-color, transparent)
+        i
+            margin-right: 15px
+            +circle(white, 40px)
+            color: $primary-color
+        a
+            color: white
+            font-size: 24px
+            font-weight: 500
+            margin-bottom: 7px
+            +xs-d
+                font-size: 16px
+    &.style-two
+        padding: 50px
+        +flexcenter(center)
+        +sm-d
+            display: block
+            +gapboth(padding, 15px)
+            h5 a
+                word-break: break-all
+        &:before
+            opacity: 0.9
+            background-color: $primary-color
+        h3
+            font-size: 30px
+            +sm-d
+                font-size: 25px
+    .contact-info
+        li
+            margin-top: 35px
+            i
+                color: white
+                background: rgba(255, 255, 255, 0.25)
+            span
+                opacity: 0.7
+            
+/* Contact Two */
+.contact-two
+    .contact-section-inner
+        margin-top: -50px
+        transform: translateY(130px)
+        box-shadow: 0px 0px 33px 0px rgba(0, 0, 0, 0.07)
+        +xs-d
+            +gapboth(padding, 15px)
+        +tb-d
+            transform: translateY(100px)
+        
+/* Contact Three */
+.contact-section-three
+    .container
+        max-width: 1380px
+.contact-form-three
+    +xs-d
+        +gapboth(padding, 15px)
+    button
+        width: 100%
+        padding-top: 15px
+        padding-bottom: 15px
+        
+/* Contact Page */
+.contact-info-area
+    display: flex
+    flex-wrap: wrap
+    padding: 55px 0 25px
+    justify-content: center
+    border: 10px solid #f1f1f1
+.contact-info-item
+    width: 33.33%
+    text-align: center
+    margin-bottom: 30px
+    +gapboth(padding, 50px)
+    border-right: 5px solid #f1f1f1
+    +tm-d
+        width: 50%
+    +mo-d
+        width: 50%
+        +gapboth(padding, 15px)
+    +sm-d
+        width: 100%
+        border-right: none
+    &:last-child
+        border-right: none
+    &:nth-child(2)
+        +tm-d
+            border-right: none
+        +mo-d
+            border-right: none
+    i
+        font-size: 40px
+        margin-bottom: 15px
+        display: inline-block
+        color: $primary-color
+    p
+        color: #8a8a8a
+        font-size: 18px
+        font-weight: 500
+        max-width: 235px
+        +gapboth(margin, auto)
+        a
+            color: #8a8a8a
+.contact-form-left
+    +overlay($primary-color, 0.6)
+    min-height: 400px
+    h2
+        width: 80%
+        left: 10%
+        color: white
+        bottom: 40px
+        font-size: 40px
+        padding-left: 30px
+        position: absolute
+        border-left: 5px solid white
+        +xs-d
+            font-size: 35px
+.contact-page-map
+    margin-bottom: -10px
+    iframe
+        +md-d
+            height: 500px
+        +mo-d
+            height: 400px
