@@ -1,0 +1,35 @@
+/*******************************************************/
+/******************* 08. Page Banner *******************/
+/*******************************************************/
+.page-banner
+    min-height: 550px
+    +flexcenter(start)
+    +tb-d
+        min-height: 450px
+    +mo-d
+        min-height: 400px
+    &:before
+        background: $dark-blue-color
+    .page-title
+        color: white
+        text-transform: capitalize
+        +tb-d
+            font-size: 55px
+        +mo-d
+            font-size: 45px
+        +xs-d
+            font-size: 38px
+    .breadcrumb
+        margin: 0
+        padding: 0
+        background: transparent
+        text-transform: capitalize
+        .breadcrumb-item
+            color: white
+            font-size: 18px
+            font-weight: 500
+            a
+                color: white
+            &+.breadcrumb-item::before
+                content: '-'
+                color: white

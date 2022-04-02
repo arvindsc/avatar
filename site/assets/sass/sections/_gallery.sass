@@ -1,0 +1,205 @@
+/*******************************************************/
+/***************** 15. Gallery Section *****************/
+/*******************************************************/
+.gallery-section
+    &:before
+        opacity: 1
+        height: 50%
+        background: $primary-color
+.gallery-item
+    overflow: hidden
+    position: relative
+    margin-bottom: 10px
+    &:hover
+        .gallery-content
+            transform: translateY(0)
+    img
+        width: 100%
+    .gallery-content
+        left: 20px
+        bottom: 20px
+        transition: 0.5s
+        position: absolute
+        +calc(width, '-' 40px)
+        padding: 22px 22px 10px
+        background: rgba(0, 0, 0, 0.8)
+        transform: translateY(calc(100% + 30px))
+        .category
+            font-size: 12px
+            margin-bottom: 5px
+            display: inline-block
+            
+/* Gallery Style Two */
+.gallery-section-two,
+.gallery-section-three
+    &:before
+        opacity: 1
+        height: 70%
+        background: $light-color
+.gallery-item.style-two
+    margin-bottom: 30px
+    border-radius: 5px
+    .gallery-content
+        transform: translateY(0)
+        +size(100%, 80%)
+        left: 0
+        bottom: 0
+        display: flex
+        flex-wrap: wrap
+        align-items: end
+        padding: 25px 0 25px 30px
+        background: linear-gradient(to top, $dark-blue-color, transparent)
+        h5
+            padding-bottom: 15px
+            border-bottom: 1px solid #58657c
+        .gallery-content-inner
+            width: 100%
+            
+/* Gallery Style Three */
+.gellery-section-title
+    +xl-d
+        width: 20%
+.gallery-three-wrap
+    +xl-d
+        left: 20%
+        position: relative
+        margin-top: -325px
+    +lg-d
+        +gapboth(margin, -15px)
+
+.gallery-carousel-arrow
+    .slick-arrow
+        margin-right: 20px
+        +circle(white, 55px)
+        color: $primary-color
+    
+.gallery-item.style-three
+    +gapboth(padding, 15px)
+    &:hover
+        .gallery-content
+            transform: translateY(-5px)
+            background: $primary-color
+            a
+                color: white
+    .gallery-content
+        left: 30px
+        background: white
+        border-radius: 5px
+        +calc(width, '-' 60px)
+        transform: translateY(5px)
+    img
+        border-radius: 5px
+
+/* Gallery Style Four */
+.gallery-item.style-four
+    margin-bottom: 30px
+    .gallery-content
+        transform: translateY(0)
+        +size(100%)
+        left: 0
+        bottom: 0
+        opacity: 0
+        +flexcenter(center)
+        text-align: center
+        transform: scale3d(0, 1, 1)
+        background: rgba(14, 30, 42, 0.85)
+    &:hover
+        .gallery-content
+            opacity: 1
+            transform: scale3d(1, 1, 1)
+        
+/* Gallery Style Five */
+.gallery-section-five
+    +lg-d
+        +gapboth(padding, 15px)
+    .container
+        max-width: 1600px
+    &:before
+        opacity: 1
+        height: 120%
+        background-color: $light-color
+        background-image: url(../images/gallery/gallery-bg.png)
+.gallery-item-five
+    position: relative
+    margin-bottom: 30px
+    img
+        width: 100%
+    .gallery-content
+        position: absolute
+        +size(100%)
+        left: 0
+        top: 0
+        padding: 20px
+        display: flex
+        align-items: end
+        text-align: center
+        justify-content: center
+        background: linear-gradient(to top, #060020, transparent)
+        h3
+            margin-bottom: 5px
+        .gallery-btn
+            +size(45px)
+            line-height: 45px
+            text-align: center
+            border-radius: 5px
+            position: absolute
+            right: 22px
+            top: -20px
+            opacity: 0
+            transition: 0.5s
+            background: $primary-color
+            transform: translateY(100%)
+    &:hover
+        .gallery-btn
+            opacity: 1
+            transform: translateY(0)
+        
+/* Portfolio Page */
+.portfolio-filter
+    flex-wrap: wrap
+    +flexcenter(center)
+    li
+        margin: 3px
+        font-size: 18px
+        cursor: pointer
+        transition: 0.5s
+        font-weight: 500
+        padding: 3px 18px
+        border-radius: 5px
+        color: $heading-color
+        +sm-d
+            font-size: 16px
+        &:hover, &.current
+            color: white
+            background: $primary-color
+.portfolio-wrap
+    .gallery-item.style-three
+        padding: 0
+        margin-bottom: 30px
+        
+/* Portfolio Details */
+.portfolio-details-content
+    h2
+        font-size: 30px
+        margin-bottom: 15px
+    p
+        margin-bottom: 30px
+.next-prev-wrap
+    flex-wrap: wrap
+    padding-top: 35px
+    padding-bottom: 25px
+    +flexcenter(space-between)
+    border-top: 1px solid #e6ecf7
+    border-bottom: 1px solid #e6ecf7
+    a
+        margin-bottom: 10px
+        display: inline-block
+        span
+            +gapboth(margin, 10px)
+            font-size: 24px
+            +sm-d
+                font-size: 18px
+        i
+            font-size: 18px
+            +sm-d
+                font-size: 16px

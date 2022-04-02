@@ -1,0 +1,283 @@
+/*******************************************************/
+/****************** 09. About Section ******************/
+/*******************************************************/
+.about-section
+    z-index: 1
+    position: relative
+    &:after
+        content: ''
+        height: 90%
+        width: 40%
+        right: 0
+        bottom: 0
+        z-index: -1
+        position: absolute
+        background: url(../images/about/about-bg-shape.png) no-repeat bottom
+    &.style-four:after,
+    &.style-five:after
+        background: url(../images/about/about-four-bg-shape.png) no-repeat bottom
+    .fact-counter-inner
+        transform: translateY(50%)
+        +tb-d
+            transform: translateY(100px)
+        
+.about-image-shape
+    max-width: 555px
+    position: relative
+    z-index: 1
+    &:before
+        content: ''
+        height: 70%
+        width: 86%
+        left: -9px
+        z-index: -1
+        bottom: 42px
+        position: absolute
+        background: #104cba
+        animation: borderRadius1 8s ease-in-out infinite
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%
+    &:after
+        content: ''
+        height: 97%
+        width: 76%
+        top: 13px
+        left: 13px
+        z-index: -1
+        position: absolute
+        background: #273540
+        animation: borderRadius2 8s ease-in-out infinite
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%
+
+.about-content
+    .list-style-one
+        flex-wrap: wrap
+        +flexcenter(space-between)
+        li
+            width: 49%
+            margin-top: 30px
+            +sm-d
+                width: 100%
+    > i
+        color: black
+        display: block
+        margin-right: 25px
+        margin-bottom: 10px
+    .feature-item
+        border: none
+        max-width: 470px
+        padding: 0 0 30px
+        border-bottom: 1px solid #E6E8E9
+        &:hover
+            box-shadow: none
+            border-color: #E6E8E9
+            
+/* About Two */
+.about-wrap
+    position: relative
+    &:before
+        position: absolute
+        +size(80%, 100%)
+        content: ''
+        right: 0
+        top: 75px
+        box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.07%)
+        +tb-d
+            display: none
+    
+.about-two-image,
+.about-three-image
+    max-width: 500px
+    position: relative
+    &:before
+        content: ''
+        z-index: -1
+        left: -45px
+        bottom: -35px
+        position: absolute
+        +size(130px, 100px)
+        background: url(../images/about/about-bg-dots.png) no-repeat
+    img
+        border-radius: 220px 220px 0 0
+        
+/* About Three */
+.about-three-image
+    &:before
+        bottom: 15%
+    img
+        width: 67%
+        border-radius: 5px
+        &:last-child
+            margin: -33% 0 0 33%
+        
+/* About Four */
+.about-four-images
+    .about-bg-circle
+        z-index: -1
+        margin-top: -45px
+        position: relative
+    .bg-circle-dtos,
+    .about-bg-circle
+        max-width: 60%
+        
+//About Four Tab
+.about-tab-section
+    .fact-counter-inner
+        transform: translateY(-120px)
+        +tb-d
+            transform: translateY(-95px)
+.about-tab
+    +flexcenter(space-between)
+    border-bottom: 2px solid #1a2935
+    +mo-d
+        border-bottom: none
+    li
+        &:last-child a
+            padding-right: 0
+        a
+            +flexcenter(start)
+            position: relative
+            padding: 0 20px 25px 0
+            +mo-d
+                margin-bottom: 15px
+                padding-bottom: 10px
+            &.active
+                i
+                    color: $primary-color
+                &:before
+                    width: 100%
+            &:before
+                content: ''
+                height: 3px
+                width: 0
+                left: 0
+                top: 100%
+                transition: 0.5s
+                position: absolute
+                background: $primary-color
+            i
+                font-size: 40px
+                margin-right: 20px
+                +tb-d
+                    font-size: 30px
+                    margin-right: 10px
+            h3
+                margin: 0
+                +tb-d
+                    font-size: 16px
+.about-tab-content
+    padding-top: 65px
+    
+/* About Five */
+.about-fiver-image
+    .about-bg-circle
+        position: absolute
+        left: 0
+        bottom: 0
+        z-index: -1
+        transform: translate(-50%, 50%)
+        
+/* About Six */
+.about-content-six
+    .list-style-one
+        li
+            font-size: 18px
+            font-weight: 400
+            +mo-d
+                font-size: 16px
+            &:before
+                +size(25px)
+                margin-top: 0
+                font-size: 14px
+                line-height: 25px
+.about-shape-six
+    z-index: 1
+    max-width: 520px
+    position: relative
+    +mo-d
+        margin-top: 55px
+    .about-graph
+        position: absolute
+        bottom: -5%
+        left: -8%
+        width: 50%
+        animation: bounce 15s infinite linear
+    &:before
+        content: ''
+        opacity: 0.1
+        z-index: -1
+        top: 0
+        right: 0
+        position: absolute
+        +circle($primary-color, 95%)
+        animation: down-up-one 5s infinite linear
+    
+/* customization */
+.customization-images
+    max-width: 570px
+    position: relative
+    img
+        &:nth-child(1)
+            margin-left: -9%
+            margin-right: 11%
+        &:nth-child(2)
+            display: block
+            margin: -48% 0 0 auto
+    &:after
+        content: ''
+        height: 90%
+        width: 100%
+        top: 10%
+        left: -10%
+        z-index: -1
+        position: absolute
+        background: #F9F6FD
+        animation: jello 20s linear infinite
+        border-radius: 10% 40% 40% 60% / 40% 60% 35% 65%
+        
+.customization-content
+    .list-style-three
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        li
+            width: 48%
+            margin-bottom: 18px
+            +sm-d
+                width: 100%
+            &:before
+                font-size: 10px
+                margin-top: 5px
+                margin-right: 10px
+                +circle(white, 20px)
+                color: $primary-color-two
+                border: 1px solid $primary-color-two
+            
+/* About Seven */
+.about-seven
+    .circle-drop
+        top: 25%
+        right: 10%
+        position: absolute
+        +circle(#49DEFF, 20px)
+        animation: zoomInOut 2s linear infinite
+.about-seven-content
+    .list-style-three
+        li
+            color: black
+            font-weight: 700
+            margin-bottom: 20px
+            &:before
+                +size(25px)
+                flex: none
+                color: #2969E6
+                margin-top: 2px
+                border: 1px solid
+                border-radius: 50%
+                text-align: center
+                line-height: 25px
+            
+/* Solution Place */
+.solution-place-image
+    +xl-d
+        text-align: right
+        margin-right: -200px

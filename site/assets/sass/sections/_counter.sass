@@ -1,0 +1,118 @@
+/*******************************************************/
+/****************** 11. Fact Counter *******************/
+/*******************************************************/
+.success-item
+    margin-bottom: 50px
+    .count-text
+        font-size: 48px
+        line-height: 1;
+        @extend %heading
+        font-weight: 700
+        margin-bottom: 20px
+        display: inline-block
+        &.plus:after
+            content: '+'
+        &.k:after
+            content: 'k'
+    p
+        font-size: 22px
+        font-weight: 500
+        margin-bottom: 0
+    &.style-three
+        margin-bottom: 0
+        padding-top: 80px
+        padding-bottom: 80px
+        border-left: 1px solid #285ec1
+        border-bottom: 1px solid #285ec1
+.text-white
+    .count-text
+        color: white
+        
+/* Style Two */
+.fact-counter-color
+    .success-item
+        .count-text
+            color: $primary-color
+        p
+            color: $heading-color
+            
+.counter-left-content
+    +mo-d
+        +gapboth(padding, 35px)
+            
+.counter-right
+    border-top: 1px solid #285ec1
+    .row
+        +colgap(0)
+        
+/* Success Circle Style */
+.success-item.circle-style
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.07)
+    +gapboth(margin, auto)
+    +circle(white, 180px)
+    padding: 45px 0
+    line-height: 1
+    border: 10px solid rgba(231, 231, 233, 0.56)
+    .count-text
+        display: block
+        font-size: 36px
+        font-weight: 600
+        margin-bottom: 15px
+        color: $primary-color-two
+        font-family: "Rubik", sans-serif
+    &.color-two
+        .count-text
+            color: $primary-color
+    &.color-three
+        .count-text
+            color: #9E59FF
+    &.color-four
+        .count-text
+            color: #12B571
+            
+/* Counter Four */
+.counter-four-inner
+    z-index: 1
+    background: white
+    position: relative
+    padding: 65px 50px 15px
+    box-shadow: 0px 4px 70px rgba(0, 15, 92, 0.06)
+    +xs-d
+        +gapboth(padding, 25px)
+    &:after,
+    &:before
+        top: 0
+        content: ''
+        z-index: -1
+        height: 100%
+        width: 100px
+        position: absolute
+        background-size: 100% 100%
+        background-position: center
+        background-image: url(../images/shapes/counter-side-line.png)
+        +tb-d
+            display: none
+    &:before
+        left: 25%
+    &:after
+        left: 57%
+.success-item.style-four
+    display: flex
+    > i
+        flex: none
+        color: #44C5E5
+        margin-right: 20px
+        +circle(transparentize(#44C5E5, 0.85), 50px)
+    .count-text
+        display: block
+        font-weight: 500
+        margin-bottom: 10px
+        text-transform: uppercase
+        font-family: 'Circular Std'
+        &.m-plus:after
+            content: 'm+'
+        &.percent:after
+            content: '%'
+    .normal-text
+        font-size: 16px
+        font-weight: 600

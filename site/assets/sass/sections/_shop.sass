@@ -1,0 +1,163 @@
+/*******************************************************/
+/******************** 24. Shop Page ********************/
+/*******************************************************/
+.shop-shorter
+    padding: 20px
+    flex-wrap: wrap
+    background: #eff2f6
+    +flexcenter(space-between)
+    .sort-text
+        margin: 10px
+        
+    .grid-list
+        display: flex
+        font-size: 20px
+        li
+            margin-top: 5px
+            margin-bottom: 5px
+            +gapboth(padding, 10px)
+    .products-dropdown
+        select
+            border-radius: 0
+            border-width: 1px
+            padding-top: 13px
+            padding-bottom: 13px
+            
+.product-item
+    margin-bottom: 40px
+    .image
+        position: relative
+        margin-bottom: 25px
+        +overlay($primary-color, 0.57)
+        &:before
+            height: 0
+            top: auto
+            bottom: 0
+            z-index: 1
+            transition: 0.5s
+        .sale
+            position: absolute
+            left: 5px
+            top: 5px
+            z-index: 2
+            color: white
+            font-size: 13px
+            font-weight: 500
+            padding: 5px 15px
+            border-radius: 5px
+            background: $primary-color
+        img
+            width: 100%
+        .theme-btn
+            position: absolute
+            left: 50%
+            top: 50%
+            z-index: 2
+            opacity: 0
+            background: white
+            width: max-content
+            transform: translate(-50%, -50%)
+    .title-price
+        margin-bottom: 15px
+        +flexcenter(space-between)
+        h5
+            margin-bottom: 0
+        .price
+            color: $primary-color
+    &:hover
+        .theme-btn
+            opacity: 1
+        .image:before
+            height: 100%
+    
+/* Product Details */
+.shop-details-content
+    h2
+        +sm-d
+            font-size: 30px
+.product-thumb
+    .product-thumb-item
+        cursor: pointer
+    .slick-dots
+        margin-top: 25px
+        +flexcenter(center)
+        li
+            height: 4px
+            width: 18px
+            margin: 3px
+            cursor: pointer
+            overflow: hidden
+            transition: 0.5s
+            text-indent: 2000px
+            background: $light-black-color
+            button
+                display: none
+            &:hover,
+            &.slick-active
+                background: $primary-color
+    
+.descriptions
+    .shop-price
+        font-size: 20px
+    .price
+        margin-right: 10px
+        color: $primary-color
+    .add-to-cart
+        display: flex
+        input
+            width: auto
+            border: none
+            margin-right: 10px
+            background: $light-color
+    .product-meta
+        li
+            margin-bottom: 5px
+            a
+                &:after
+                    content: ','
+                &:last-child
+                    &:after
+                        content: ''
+.product-information-tab
+    li
+        margin-right: 5px
+        a
+            color: white
+            padding: 12px 25px
+            border-radius: 5px
+            display: inline-block
+            background: $light-black-color
+            &:hover,
+            &.active
+                background: $primary-color
+                
+.review-item
+    display: flex
+    +sm-d
+        display: block
+    .reviewer-img
+        flex: none
+        width: 100px
+        margin: 0 15px 15px 0
+        img
+            width: 100px
+            height: 100px
+            border-radius: 50%
+.reviewer-review
+    padding: 13px 20px 20px
+    border: 1px solid #e4e1e3
+    .reviewer-header
+        flex-wrap: wrap
+        +flexcenter(start)
+        h6
+            margin: 8px 10px 8px 0
+            
+        .date
+            margin-right: auto
+            padding: 4px 10px 4px 0
+.your-rating,
+.reviewer-review
+    .ratings
+        font-size: 13px
+        i
+            color: $primary-color

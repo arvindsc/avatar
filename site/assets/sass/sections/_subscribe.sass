@@ -1,0 +1,61 @@
+/*******************************************************/
+/**************** 21. Subscribe Section ****************/
+/*******************************************************/
+.subscribe-form
+    padding: 2px
+    border-radius: 5px
+    +flexcenter(center)
+    border: 2px solid #88a6dd
+    +sm-d
+        display: block
+    input
+        border: none
+        color: white
+        opacity: 0.8
+        background: transparent
+        padding: 12px 10px 12px 30px
+        &::placeholder
+            color: white
+            opacity: 0.8
+    button
+        font-weight: 500
+        background: white
+        border-radius: 5px
+        padding: 11px 45px
+        color: $heading-color
+        +sm-d
+            width: 100%
+        
+/* Subscribe Form Two */
+.subscribe-form-two
+    padding: 5px
+    display: flex
+    background: white
+    border-radius: 5px
+    align-items: center
+    +sm-d
+        display: block
+        margin-right: 0
+    input
+        border: none
+        background: transparent
+    .theme-btn
+        flex: none
+        padding: 13px 28px
+        background: #FF6600
+        margin-right: -50px
+        +sm-d
+            width: 100%
+            margin-right: 0
+.subscribe-two
+    .shape-dots,
+    .shape-stones
+        width: 15%
+        max-width: 85px
+        position: absolute
+    .shape-dots
+        top: 50px
+        right: 10%
+        animation: bounce 10s infinite linear
+    .shape-stones
+        animation: shake 15s infinite linear

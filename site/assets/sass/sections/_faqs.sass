@@ -1,0 +1,65 @@
+/*******************************************************/
+/****************** 25. FAQs Section ******************/
+/*******************************************************/
+.faq-accordion
+    .card
+        border: none
+        border-radius: 0
+        margin-bottom: 20px
+        box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05)
+    .card-header
+        border: none
+        color: #000F5C
+        display: flex
+        font-size: 20px
+        font-weight: 500
+        transition: 0.5s
+        padding: 25px 40px
+        background: transparent
+        font-family: 'Circular Std'
+        justify-content: space-between
+        +sm-d
+            +gapboth(padding, 25px)
+        +xs-d
+            font-size: 18px
+    .card-body
+        margin-top: -15px
+        padding: 0 40px 10px
+        +sm-d
+            +gapboth(padding, 25px)
+    .toggle-btn
+        +size(30px)
+        flex: none
+        margin-left: 8px
+        transition: 0.5s
+        position: relative
+        transform: rotate(180deg)
+        +xs-d
+            +size(20px)
+        &:after,
+        &:before
+            position: absolute
+            content: ''
+            left: 50%
+            top: 50%
+            transition: 0.5s
+            background: #000F5C
+            transform: translate(-50%, -50%)
+        &:before
+            width: 2px
+            z-index: 1
+            height: 100%
+        &:after
+            height: 2px
+            width: 100%
+.faq-triangle
+    top: 20%
+    left: 10%
+    position: absolute
+    animation: shapeAnimationFive 20s linear infinite
+.faq-box-shape
+    top: 20%
+    right: 20%
+    position: absolute
+    +box($orange-color, 10px)
+    animation: shapeAnimationThree 20s linear infinite
