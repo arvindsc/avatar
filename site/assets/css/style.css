@@ -5356,6 +5356,7 @@ h6,
 }
 .top-right .office-time {
   margin-right: 75px;
+  display: none;
 }
 @media only screen and (max-width: 375px) {
   .top-right .office-time {
@@ -5369,6 +5370,7 @@ h6,
 @media only screen and (max-width: 1500px) {
   .top-right .office-time {
     margin-right: 15px;
+    display: none;
   }
 }
 
@@ -5876,6 +5878,7 @@ h6,
 .header-three .top-right .office-time {
   display: block;
   margin-right: 0;
+  display: none;
 }
 
 .header-three .main-menu {

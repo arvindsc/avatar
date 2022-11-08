@@ -56,5 +56,6 @@
 @media only screen and (max-width: 767px){
     .header-three .top-right{
         margin-left: auto;
+        display: none;
     }
 }
